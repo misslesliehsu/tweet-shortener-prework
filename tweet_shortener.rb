@@ -22,7 +22,7 @@
       else word
       end
     end
-    puts cleaned.join(" ")
+    return cleaned.join(" ")
   end
 
   def bulk_tweet_shortener(tweets)
