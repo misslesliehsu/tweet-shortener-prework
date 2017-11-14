@@ -29,7 +29,7 @@
     cleaned = tweets.each do |tweet|
       word_substituter(tweet)
     end
-    puts cleaned.to_s
+    puts cleaned.join("\n")
   end
 
   def selective_tweet_shortener(tweet)
