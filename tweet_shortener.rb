@@ -17,7 +17,7 @@
   def word_substituter(tweet)
     array = tweet.split(" ")
     cleaned = array.collect do |word|
-      if dictionary.include?(word) || dictionary.include?(word.downcase)
+      if dictionary.include?(word || word.downcase)
         dictionary[word.downcase]
       else word
       end
@@ -26,9 +26,7 @@
   end
 
   def bulk_tweet_shortener(tweets)
-    #tweets = array of tweets
-    #cleaned = array of cleaned tweets
-    tweets.collect do |tweet|
+      tweets.collect do |tweet|
       puts word_substituter(tweet)
     end
   end
