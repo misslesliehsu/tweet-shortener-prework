@@ -28,8 +28,8 @@
   def bulk_tweet_shortener(tweets)
     cleaned = tweets.collect do |tweet|
       word_substituter(tweet)
+      puts cleaned
     end
-    puts cleaned.join(" ")
   end
 
   def selective_tweet_shortener(tweet)
