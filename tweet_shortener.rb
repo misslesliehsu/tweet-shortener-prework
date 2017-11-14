@@ -17,7 +17,7 @@
   def word_substituter(tweet)
     array = tweet.split(" ")
     cleaned = array.collect do |word|
-      if dictionary.include?(word) || dictionary.include?(word.capitalize)
+      if dictionary.include?(word || word.downcase)
         dictionary[word]
       else word
       end
