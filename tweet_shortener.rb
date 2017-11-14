@@ -26,9 +26,10 @@
   end
 
   def bulk_tweet_shortener(tweets)
-    cleaned = tweets.collect do |tweet|
-      word_substituter(tweet)
-      puts cleaned
+    #tweets = array of tweets
+    #cleaned = array of cleaned tweets
+    tweets.collect do |tweet|
+      puts word_substituter(tweet)
     end
   end
 
